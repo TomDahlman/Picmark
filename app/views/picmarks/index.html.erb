@@ -1,0 +1,11 @@
+<h2>Some Pictures</h2>
+<%= link_to "Add an image", new_picture_url %>
+
+<ul>
+	<% @pictures.each do |p| %>
+	<li>
+		<p> "This is: "<%= p.title %> </p>
+		<p>	<%= image_tag p.url, :width => 200 %>  </p>
+	</li>
+	<% end %>
+</ul>
