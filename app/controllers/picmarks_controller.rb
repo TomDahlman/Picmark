@@ -15,16 +15,17 @@ class PicmarksController < ApplicationController
     p.url = params[:url]
     p.title = params[:title]
     p.save
-    redirect_to 'all_pictures'
+    redirect_to all_pictures
   end
   
   def edit
+    @pic = Picture.find(params[:id])
   end
   
   def update
     p = Picture.find(params[:id])
     p.url = params[:url]
-    p.title - params[:title]
+    p.title = params[:title]
     p.save
     redirect_to 'one_picture'
   end

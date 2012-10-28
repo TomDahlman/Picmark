@@ -1,0 +1,5 @@
+<h3>The picture you've chosen is id# <%= @pic.id %></h3>
+
+<p>This is: <%= @pic.title %></p>
+<p><%= image_tag @pic.url %></p>
+<%= link_to "Edit", edit_picture_path(@pic.id) %>

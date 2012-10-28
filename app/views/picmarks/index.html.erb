@@ -5,7 +5,7 @@
 	<% @pictures.each do |p| %>
 	<li>
 		<p> "This is: "<%= p.title %> </p>
-		<p>	<%= image_tag p.url, :width => 200 %>  </p>
+		<p>	<%= link_to image_tag(p.url, :width => 200), one_picture_path(p.id) %>  </p>
 	</li>
 	<% end %>
 </ul>

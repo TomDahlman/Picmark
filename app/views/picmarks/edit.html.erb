@@ -1,0 +1,12 @@
+<h2>Enter the new info</h2>
+
+<%= form_tag one_picture_path(@pic.id),  :method => "put" do %>
+	<%= label_tag :url, "URL:" %>
+	<%= text_field_tag :url, @pic.url%>
+	
+	<%= label_tag :title, "Title:" %>
+	<%= text_field_tag :title, @pic.title%>
+	
+	<%= submit_tag "Change it" %>
+	<%= link_to "cancel", all_pictures_url %>
+<% end %>
